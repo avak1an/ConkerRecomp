@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/conker-live-recomped-logo-v2-c.png" alt="Conker: Live & Recomped" width="760">
+<img src="assets/conker-live-recomped-logo-v2-c.png" alt="Conker: Live & Recomped" width="400">
 
 # Conker: Live & Recomped
 
@@ -68,6 +68,9 @@ The project has progressed well beyond initial XBE startup and is now reconstruc
 - ✅ Tavern actor-manager discovery and scene traversal
 - ✅ Native geometry traversal and cache compilation
 - ✅ Stable recurring frame/update loop
+- ✅ Function-boundary recovery for code the disassembler cannot see directly
+- ✅ Automated stack-balance verification of every recompiled function
+- 🚧 Title initialization past Frontend bring-up
 - 🚧 Scene / title-manager integration
 - 🚧 Rendering the complete Frontend scene
 - 🚧 GPU translation / rendering correctness
