@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/conker-live-recomped-logo-v2-c.png" alt="Conker: Live & Recomped" width="760">
+
 # Conker: Live & Recomped
 
 ### A native Windows recompilation project for *Conker: Live & Reloaded*
