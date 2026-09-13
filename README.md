@@ -1,3 +1,11 @@
+> **Development preview:** The local generation and Windows runtime can run the
+> intro and tavern. Import your own recognized ISO, generate C, build locally,
+> then test through the launcher. Campaign and multiplayer remain unfinished.
+> See [setup and build instructions](docs/DEVELOPMENT.md).
+
+Double-click **[conker-launcher.exe](conker-launcher.exe)** after cloning or
+extracting this repository to open the launcher without compiling it.
+
 <div align="center">
 
 <img src="assets/conker-live-recomped-logo-v2-c.png" alt="Conker: Live & Recomped" width="400">
@@ -53,33 +61,11 @@ Users will need to provide their own legal copy of **Conker: Live & Reloaded**.
 > [!WARNING]
 > **Very early development — not currently ready for normal gameplay.**
 
-The project has progressed well beyond initial XBE startup and is now reconstructing the original game's live Frontend/title runtime.
-
-### Current milestones
-
-- ✅ Original Xbox executable analysis and native recompilation pipeline
-- ✅ Xbox memory / register compatibility layer
-- ✅ Kernel and file-system bridge work
-- ✅ Frontend package loading and CAFF parsing
-- ✅ Frontend `.data` and `.gpu` section handling
-- ✅ Resource relocation and package graph reconstruction
-- ✅ Frontend database loading / publication
-- ✅ Menu entity construction
-- ✅ Tavern actor-manager discovery and scene traversal
-- ✅ Native geometry traversal and cache compilation
-- ✅ Stable recurring frame/update loop
-- ✅ Function-boundary recovery for code the disassembler cannot see directly
-- ✅ Automated stack-balance verification of every recompiled function
-- 🚧 Title initialization past Frontend bring-up
-- 🚧 Scene / title-manager integration
-- 🚧 Rendering the complete Frontend scene
-- 🚧 GPU translation / rendering correctness
-- 🚧 Audio
-- 🚧 Gameplay
-- 🚧 Keyboard / mouse support
-- 🚧 User-friendly game importer / installer
-
-The exact list changes frequently while low-level Xbox behavior is recovered.
+The migrated runtime supports the logo/loading/video sequence, outdoor tavern
+entrance scene, all six tavern menu positions, controller navigation and audio.
+Game code and assets are generated or extracted locally from the user's disc.
+Rendering fidelity and performance remain under development; campaign and
+multiplayer are the next major areas of work.
 
 ---
 
@@ -93,17 +79,13 @@ Development currently focuses on Windows first. Other platforms may be considere
 
 ---
 
-## 📁 Planned User Workflow
+## 📁 User Workflow
 
-Eventually, a user should be able to:
-
-```text
-1. Download ConkerRecomp
-2. Launch the setup/import tool
-3. Select their own Conker: Live & Reloaded disc / ISO
-4. Let the tool verify and extract the required data
-5. Launch Conker: Live & Recomped
-```
+1. Clone or download ConkerRecomp and install the [build prerequisites](docs/DEVELOPMENT.md).
+2. Open `conker-launcher.exe`.
+3. Select your own supported Conker ISO / XISO and verify its SHA-1.
+4. Select **Import & generate** to extract data and generate C on your PC.
+5. Select **Build local game**, then **Play** to test the intro and tavern.
 
 ---
 

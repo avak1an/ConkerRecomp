@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "supported_versions": [],
+  "development_versions": [
+    {
+      "id": "conker-usa-xiso-development-1",
+      "status": "development preview: intro and tavern; campaign and multiplayer not validated",
+      "image_format": "XDVDFS XISO",
+      "region": "USA",
+      "revision": "unconfirmed",
+      "image_size": 4757782528,
+      "image_sha1": "7ab67f92a2ac6de53487f0be652cb44c562b2018",
+      "image_sha256": "9f9f4e20224865436d96664198d56559ed1f5762cf29410343bdcec4e70692ba",
+      "xbe_size": 7774208,
+      "xbe_sha1": "2232a1b3874d67b4bb4cf53a940420d2dab59535",
+      "xbe_sha256": "ec94bcaace16d26da480baeb2e5abe37a199fdc7aaee5f8e78d0aa17387ffa7a",
+      "generation_recipe_version": 2
+    }
+  ]
+}

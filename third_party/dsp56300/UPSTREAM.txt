@@ -1,0 +1,5 @@
+Motorola DSP56300 Toolkit
+https://github.com/mborgerson/dsp56300
+Revision 5b96b127413cc173143250c8c8226fb36cb99b3a
+License: MIT (see LICENSE).
+No game programs, firmware or microcode included.

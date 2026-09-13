@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "source_commit_scope": "launcher, local generation and Windows intro/tavern runtime preview",
+  "game_build_ready": true,
+  "distributed_executables": [
+    "conker-launcher.exe"
+  ],
+  "categories": {
+    "GENERIC_XBOXRECOMP": [
+      "tools/xboxrecomp/",
+      "runtime/xbox/",
+      "src/xbox/ (reusable Xbox runtime with Conker compatibility fixes)",
+      "third_party/ (separately licensed reusable dependencies)",
+      "licenses/XboxRecomp-MIT.txt"
+    ],
+    "CONKER_SPECIFIC": [
+      "src/launcher/",
+      "tools/launcher/",
+      "tools/prepare/",
+      "tools/release/",
+      "config/conker/",
+      "authored tests and project metadata",
+      "src/conker/",
+      "src/xbox/input/conker_input.c",
+      "src/xbox/input/conker_input.h"
+    ],
+    "GENERATED_FROM_GAME": [
+      "local/preparation/*/game/",
+      "local/preparation/*/generated/",
+      "generated/",
+      "game/",
+      "extracted/"
+    ],
+    "LOCAL_DEBUG_ONLY": [
+      "local/",
+      "dumps/",
+      "logs/",
+      "debugger scripts and captures"
+    ],
+    "BUILD_ARTIFACT": [
+      "build/",
+      "out/",
+      "bin/",
+      "obj/"
+    ]
+  },
+  "withheld_research_components": {
+    "hand_maintained_generated_files": "Mixed authored support and reconstructed original routines; must split and regenerate original-derived portions locally.",
+    "recovered_game_and_XDK_functions": "Regenerate from the importing user's executable, never copy into public source.",
+    "analysis_databases_and_dumps": "Private evidence only; preparation must discover required metadata from the local executable.",
+    "manual_game_function_bodies": "Original executable functions are regenerated from the local XBE; authored host hooks are configuration-driven."
+  }
+}

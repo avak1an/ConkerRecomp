@@ -1,0 +1,1818 @@
+{
+  "schema_version": 1,
+  "scope": "project source and standalone launcher; game data/code generated locally",
+  "game_build_ready": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "fc38c548927f13462a30c1fed33e40925e44774b9bd26e3dc10842c1e6d4145b"
+    },
+    {
+      "path": ".github/workflows/source-boundary.yml",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "dea0bef665fb37387cf000855b935c145965bf7e495615889493a13d3df2cbd2"
+    },
+    {
+      "path": ".gitignore",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Existing public ConkerRecomp repository, with source-boundary documentation/ignore updates",
+      "sha256": "874b30ad30dd4c33ad7109319f13980ea5fa0331e269c09187d3f3b0741b1f58"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "bf2cd5ac280e092c8191e78736ab03b3016470e6715d7468fe1548e1f7d251ea"
+    },
+    {
+      "path": "LICENSE",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Existing public ConkerRecomp repository, with source-boundary documentation/ignore updates",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "LaunchConker.ps1",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "2be489f32edbe51f45b65328b011ab75abe4e2441301b065f65295201573d8d1"
+    },
+    {
+      "path": "README.md",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Existing public ConkerRecomp repository, with source-boundary documentation/ignore updates",
+      "sha256": "f8d03f77711fe10fc332d0c3a328b4fd20d27f43cca0f7a23df884a179e20b83"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "60325d684375e4e9ddbab78320778aa7832806ec493978dc884f7d85120e5a13"
+    },
+    {
+      "path": "assets/conker-live-recomped-logo-v2-c.png",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Existing public ConkerRecomp repository, with source-boundary documentation/ignore updates",
+      "sha256": "b33008dfa8b780217a3cd63d418635490268bdf7b0dcab84a23aad342676160b"
+    },
+    {
+      "path": "config/conker/generation.json",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "11fc0a0e32a38111d5b000f681460431b6873ef8a41b1738015fd314f2bca1b6"
+    },
+    {
+      "path": "config/conker/versions.json",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "dae589c012f8b134df8b2c3d29cb08d8b825e6f785128953297de862e645ef6f"
+    },
+    {
+      "path": "config/source-map.json",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "2d4a532df7981ba3dcdfd9bb45edb0654c55fcd2588fa2ae783ac863aa86c765"
+    },
+    {
+      "path": "conker-launcher.exe",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Standalone ConkerRecomp launcher built from project source by avak1an",
+      "sha256": "8b8284ff2bbeec348ac1a965be3681896b8fa4160ee37bae5eecc419d89b9f06",
+      "build_target": "conker-launcher",
+      "build_configuration": "Release",
+      "build_inputs": {
+        "src/launcher/CMakeLists.txt": "8e1a2d6fd123d76aa5420896fa7ac5d5ba7458419b083ee00ce5a14066ac168d",
+        "src/launcher/launcher.c": "f985b5d10563f65f8cccb36d37c76058a93ff8763535331a50ed4b4717e452fa",
+        "src/launcher/pages.inc": "04c4f4529a90b6de695d4f7b97757415cdc620f6fe1339351fa3d1d2a8d3aa6d",
+        "src/launcher/title_art.c": "a3cd147e809e81a42ab0a77128b67ca4379944dc74b9da92a600b8c859009e6f",
+        "src/launcher/title_art.h": "53d648261f6131da342c4b5137ed29416520cd42bb2b04dcccc7bdbaca3a5ed3",
+        "src/launcher/launcher.manifest": "ae18e973ee276ee777cf40fa0ccf4c73e23ec0280d3abd4bca39f205145ebf9a",
+        "tools/release/package_launcher.py": "3137986dfef2c4ab2ae79ca70ca69c7e122e9cf71a6564152af17c3e3c4d44ba"
+      }
+    },
+    {
+      "path": "docs/DEVELOPMENT.md",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "7b6ce4ffb932e579f1078ad092f572af5c049f982a40a9979dd7a259d44ffc7c"
+    },
+    {
+      "path": "licenses/XboxRecomp-MIT.txt",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "de6601cea3a6bf2d821b6b89f59b9d6e719cc017e530bcb4bbe2fcf7306e6dda"
+    },
+    {
+      "path": "requirements.txt",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "6b8a703c0a562d2b528575457d1b76ae5decc8d4d53093ba6515a32137098d1b"
+    },
+    {
+      "path": "runtime/xbox/kernel_stubs.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "77b12d9dfe681794545adf2c3205c07b74f802af83dd72e67c96360cccab82fd"
+    },
+    {
+      "path": "runtime/xbox/recomp_mmx.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "fd1a1a1ca261fcf0f8278134d984c7e42c413494d1baa61e276c5d0e58962c1d"
+    },
+    {
+      "path": "runtime/xbox/recomp_mmx_sse2.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "7053608c5a13ee4f2138470225dc121a0abfa812e64b3a264d423ffe47a0c21f"
+    },
+    {
+      "path": "runtime/xbox/recomp_types.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "99783f91391875566b7aee28c97ce00cf3704b3c9924b53e8c5bb43cdc911306"
+    },
+    {
+      "path": "runtime/xbox/xbox_kernel_stubs.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "6a3994e53e25e3135f72290f7fea9f803105a2b34b8acca6207017574f242248"
+    },
+    {
+      "path": "runtime/xbox/xbox_memory.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "fab57bf13542aa902494f931049890b720136338272cdeb552accfd4086590cb"
+    },
+    {
+      "path": "src/conker/integration.c",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored Conker host integration; no original game function bodies or captures",
+      "sha256": "f274a36d91befe6b7c554c27251f0cf0b7674ca33cf3f7abd4ca11054f499ca6"
+    },
+    {
+      "path": "src/conker/main.c",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored Conker host integration; no original game function bodies or captures",
+      "sha256": "2ba03e23177e78811f3176bbf36472adda2fbed1c2c3f41a4c40ff172accd206"
+    },
+    {
+      "path": "src/conker/runtime_config.c",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored Conker host integration; no original game function bodies or captures",
+      "sha256": "a675c47a91d7b83d73a8bb49fef28daadce909882e857e559354fd07723c96d9"
+    },
+    {
+      "path": "src/conker/runtime_config.h",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored Conker host integration; no original game function bodies or captures",
+      "sha256": "18b8460a383c743a33673deaf8c7a56ca0829cc955a4e536c265c8d6462a5aac"
+    },
+    {
+      "path": "src/launcher/CMakeLists.txt",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "8e1a2d6fd123d76aa5420896fa7ac5d5ba7458419b083ee00ce5a14066ac168d"
+    },
+    {
+      "path": "src/launcher/launcher.c",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "f985b5d10563f65f8cccb36d37c76058a93ff8763535331a50ed4b4717e452fa"
+    },
+    {
+      "path": "src/launcher/launcher.manifest",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "ae18e973ee276ee777cf40fa0ccf4c73e23ec0280d3abd4bca39f205145ebf9a"
+    },
+    {
+      "path": "src/launcher/pages.inc",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "04c4f4529a90b6de695d4f7b97757415cdc620f6fe1339351fa3d1d2a8d3aa6d"
+    },
+    {
+      "path": "src/launcher/smoke.inc",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "7ee141ad7fbd9fbb99c2db733f2125f9863d973487ca635afd4aced0c1d92758"
+    },
+    {
+      "path": "src/launcher/title_art.c",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "a3cd147e809e81a42ab0a77128b67ca4379944dc74b9da92a600b8c859009e6f"
+    },
+    {
+      "path": "src/launcher/title_art.h",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "53d648261f6131da342c4b5137ed29416520cd42bb2b04dcccc7bdbaca3a5ed3"
+    },
+    {
+      "path": "src/launcher/title_art_test.c",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "f6b95d53d468ff73c5b0a709e782af889decca8669a762736fcb2df489ee901c"
+    },
+    {
+      "path": "src/xbox/apu/CMakeLists.txt",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "e9a8f2dda5d659fee77b03d3ab03b8d4797d01a8554087c786e459b08752bad0"
+    },
+    {
+      "path": "src/xbox/apu/apu.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "0b387b32df1c8728c9f6896424d48996b911058a52c104bb03c60a64ddb10be4"
+    },
+    {
+      "path": "src/xbox/apu/apu_core.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "a6cc167d3e1a2a535fbd684fc1477778c4a5e57da59555dd4add143eac19a8ed"
+    },
+    {
+      "path": "src/xbox/apu/apu_debug.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "66b2d71143b9f3a4d4d7bd7ed54a5b83bcb0667e424a4b9ec44c9ee353454110"
+    },
+    {
+      "path": "src/xbox/apu/apu_dsp.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "464914b717cad254556b2ddb330289364f6c62aefd555d4604355552edc39ca1"
+    },
+    {
+      "path": "src/xbox/apu/apu_memory.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "d762f43fffdbf2cea7ed3ddd42fb0dab9c689c03cd2d2c850ca03d3b8fb35c44"
+    },
+    {
+      "path": "src/xbox/apu/apu_mmio_hook.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "9603711997206755d4d496022dd6aa2475f72c0a146edaf3015b7502a45eb26c"
+    },
+    {
+      "path": "src/xbox/apu/apu_mmio_hook.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "5e8ae20812eefdcd61291a9910557a074c7de8c8255fd88c941ccc29500fcd36"
+    },
+    {
+      "path": "src/xbox/apu/apu_regs.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "35f63459f73a5a3b05b8c22a10cab81e8d31dd5efc8e0cf12dd631d733dbcede"
+    },
+    {
+      "path": "src/xbox/apu/apu_shim.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "051029cfb30a98985f96865f21814e65905a740ca44d0abe196db89ccc5bed67"
+    },
+    {
+      "path": "src/xbox/apu/apu_state.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "c6a51476508e4c6f325bee6fb173d8caccdb1143d435e70827adeddde76fae59"
+    },
+    {
+      "path": "src/xbox/apu/apu_vp.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "e3ba9bffa47f77a7edfd9aeb45ba637fc07912579b970270d87ca6b0b1ba21da"
+    },
+    {
+      "path": "src/xbox/apu/apu_xaudio2.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "2fc796cb39a7264396b4ce0b18f62a04d9045ecea2728f9bacd7a585a6116185"
+    },
+    {
+      "path": "src/xbox/apu/apu_xaudio2.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "cffafab04128851efc5021f326eb7146e8b637207db169470925a1db4a7e5939"
+    },
+    {
+      "path": "src/xbox/apu/dsp/CMakeLists.txt",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "07c2ba7f0984cb3670795ae68f73c9d913deb5fe0511f76dd3d7f13d043f93da"
+    },
+    {
+      "path": "src/xbox/apu/dsp/COPYING",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "dd3ce02338c3a48abb6ba59b48809f7108a8bd242cb0cc8be90daafa30707c28"
+    },
+    {
+      "path": "src/xbox/apu/dsp/COPYING.LIB",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "31c90ce76b6f5aab90a205851e71d5c27e31c0aa3d7017a4383b98a6fe3f1faa"
+    },
+    {
+      "path": "src/xbox/apu/dsp/UPSTREAM.txt",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "4a15117d315ef663cee2799d116938dbcc130bfa09605fbd9afdd5d28cbff276"
+    },
+    {
+      "path": "src/xbox/apu/dsp/debug.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "1773c7f3b3db5318886ce48b01e42e00c94b80a8364089dc6276d6c7ed26eeef"
+    },
+    {
+      "path": "src/xbox/apu/dsp/dsp.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "fa88f34fd95a328dfa6ec2382bcf3f2cf41d35c7f603f60d867e6fe720e82ef3"
+    },
+    {
+      "path": "src/xbox/apu/dsp/dsp.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "d8a5851e63ae8a6c7075f51c3b19e6547c29f0b225cd7f7a3a757ef9d465b9d5"
+    },
+    {
+      "path": "src/xbox/apu/dsp/dsp_dma.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "0c70ea4cc9b71a04f1189c1b7ff4debbe5a14a635dcfbdeb6309465701580e7e"
+    },
+    {
+      "path": "src/xbox/apu/dsp/dsp_dma.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "7e6c876b95ca7a6ef29e00270fedfbe9f5eca24be34baaa1a1fbd655ce558a90"
+    },
+    {
+      "path": "src/xbox/apu/dsp/dsp_dma_regs.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "9582796ee42313de2f341356761bdef514b8a9f9962199df8881a7461b78ea62"
+    },
+    {
+      "path": "src/xbox/apu/dsp/dsp_internal.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "ea6acb2689a4c9cf3126f4c0b6547d0ed8876848446faadccf4a8f2380a00b07"
+    },
+    {
+      "path": "src/xbox/apu/dsp/dsp_jit.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "7736cda8ecf1f2b7983ca464445b2b8df157e521174fd9e90bec02bdc87cad34"
+    },
+    {
+      "path": "src/xbox/apu/dsp/dsp_port.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "bad5d88b54daf8cd46fad075f6445ed25ca08f702cd8ae3d33b3213e3661391c"
+    },
+    {
+      "path": "src/xbox/apu/dsp/interp/dsp_cpu_regs.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "5373cbe8cb5326f39cbebfbbb13a85d78b4f8d47d7ebd3e4f2291e2fcde2c926"
+    },
+    {
+      "path": "src/xbox/apu/dsp/trace.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "96faa274364f3c0b05a304fc016550336ca83e6b7a15c20f2d10248981970aa0"
+    },
+    {
+      "path": "src/xbox/apu/fpconv.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "7bea5069da542c4b3270afb74d3ee5bc6a5be4fdca6c4e1b47c46e399db4581e"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_combiners.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "e98dfba4a11144784dbd01a3c63321c0985bf09a3d51f14a306fe9e6561f4e7a"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_combiners.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "23351bb5981deb841cee8a2476173b69722361b137366757552ced5e7fa4fee7"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_compile.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "bede6787199bfa154ea65a836db4f2976ecc65fd864a0119d7c6938817d22903"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_compile.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "a65ff8824c37f3b443733c0c902b0656ef0a67bdfd84ed46e7fc038c22939043"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_depth_alias.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "d3e764e09596c322bca144b26dc5b8effe6ef1496ab7d3ca7c126f0233e7387c"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_device.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "e7abbaed8a045abf3054c90b9bcf33a5c47252846b4779961c72412db59ef2f0"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_internal.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "90e3ce500512fd556c645bc9013ebd0ea5f2efb4766165a0af4d1902e302d0f6"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_nv2a_gpu.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "1be15f874916702e19f8f6ee8a035d9556b6294355d4b84f9c06d7a4b6f377ec"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_nv2a_gpu.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "463e9e39deb63cc8ab4c026977cc5b501302b06d7ce50f05bb048f1bd74911d8"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_resources.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "ee3ce6b9768cd72d5d4473394fab1be69ba0a79e1e817bd7cd9e65703ccb240c"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_shaders.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "f1230c3040f20402aedf353b0e925cfbbcd428d79c0f37baa5b23d0e5ad71715"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_states.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "f6c09feef66c2a3ecde3379628485b763ea8d8b0747d225e6b28cae2e65f82fc"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_swizzle.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "bcb5296054ce73bd70162c9c6c436d4fd7175ca153dcbeb97271d5ca5eae4953"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_vsh.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "02959083672d0b7c4ccb19496d82451584062ee0865dcd110f943f6cbc032913"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_vsh.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "d54763114d8ad931b4c8cb668a22df96a63267b3845bbf66f4cf4bce51c8b2c8"
+    },
+    {
+      "path": "src/xbox/d3d/d3d8_xbox.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "72fdc459bdaa69a0dcacef2be8c37cde4ec34668d03934528a6d9e00af0025db"
+    },
+    {
+      "path": "src/xbox/input/conker_input.c",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored Conker host integration; no original game function bodies or captures",
+      "sha256": "21d944e7910f759ea0d49fc860a60de2e9a484dd423795169d6b58a8a74ba402"
+    },
+    {
+      "path": "src/xbox/input/conker_input.h",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored Conker host integration; no original game function bodies or captures",
+      "sha256": "ffd7dd6313d5d08e5c86ab770de2b2318c7f73da3e6eed2a555c0b6a8ccd1532"
+    },
+    {
+      "path": "src/xbox/input/input_queue.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "6ee54d2adf7d731780f50055c5f2483ef1027d1dd51574bdc6a0c850086b8848"
+    },
+    {
+      "path": "src/xbox/input/input_queue.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "d94e67d1193347b70c39c1cdf14ac745d0f609e853af6f20abdc969e04892448"
+    },
+    {
+      "path": "src/xbox/input/xinput_device.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "27f50d5cc29b67ef6406991018e8588d1c5aecb0cf7b4923efeafacdf9c26c4c"
+    },
+    {
+      "path": "src/xbox/input/xinput_xbox.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "350eb39fe5e3428cbf88458c2ee44191da03cc6aded7a83743c1a781baf511a9"
+    },
+    {
+      "path": "src/xbox/kernel/kernel.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "0de7fd79f5692d00dd7d0b81a68ea17bf2669b150589016177e49b1ac6e7183f"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_bridge.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "ab50809d8be8bcf47188beee8041e3dccec10e90af87b04cce2ba96e3de7dee9"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_crypto.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "0abfd628753ef8137654ef95418fd7bea23ab58824b25db05ba89dfa0c851046"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_file.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "8c2e2e30c158e9b8f696997665b79545dd1b22d52fe82b2efbc4f4aaf2568b5c"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_guest_clock.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "40acbc780d0debbe8324ffa83212f5daa146e6509a1bf5bd5ec345e831a53f09"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_guest_clock.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "628d85bbe7c308eea14f288148d6a184fb0d7a03e41a59238aa6be6cd7ba911f"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_guest_timer.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "d9a5c291cb2779d2cef81190def74e8972aa0ee4a98f18261c26a8ae979a17da"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_guest_timer.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "5cb0a3ee09a1c5d1fcc3d19f9e13265a797a4d9cc2c3ee7391092ed321ea6f7d"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_hal.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "2e788bc5ba6d2f618d4cfea32660ab76ad882a7acf74bbb24e6f77f39d4c2727"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_io.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "54b35676c2d0769b15df17bae6b00aa463f4ebd09743109b1a0a0de8f2802577"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_memory.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "a04845a75a19209b1a1f2b43f39a36c7137bb94ebf1fba9d1651918fa52d6cc6"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_ob.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "82ede62218f878df0fea8e082c6e2b8c5f8d4d9934eddaa2eed2e0c9c7665fd8"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_path.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "1a33aa8749444ce3446631b1f5a020ef5027f63367e60c6925bd03e357ab793d"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_pool.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "da09ce9ca9520bd08982f36ad0f831b6f6ca0c425ab6287cfceb69715c2bcc10"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_rtl.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "203dfc450b62567cbe19b41ee737a23068916ee9bc7b1f431fe2af77b994d82f"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_sync.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "c5d10453a4bb4d081a15fa09197be4c70cde4088a5496aba9fe4c7ac7a5689fe"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_thread.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "93d7472d066d386aa75607e064b5e5dce967d96fb3fe26da9d7d6b2f88cba49b"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_thunks.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "76fc98185117ba5015b3fd2270f78a3bd3fe9c4aaee11064dd940364b810ff3e"
+    },
+    {
+      "path": "src/xbox/kernel/kernel_xbox.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "4d9ae1724a6364cb9240fd94011586e41f3da14b732532ea25f4898730871faf"
+    },
+    {
+      "path": "src/xbox/kernel/recomp_esp_check.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "359b2548800148ec55ae47b8f6ad3e5b6f19386d6687383b21f49f25534a05e5"
+    },
+    {
+      "path": "src/xbox/kernel/recomp_globals.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "6cd62c707d6f709335e2aa127c7d0bb31e3fbbbb344e42caa0cb6f5f4c66f700"
+    },
+    {
+      "path": "src/xbox/kernel/xbox_memory.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "61cb6532e6be5a05d9365a3995dc2300a2e4878387ce81f5dd0e827b46dca739"
+    },
+    {
+      "path": "src/xbox/kernel/xbox_memory_layout.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "e8d331e905d9900a33e622cb2f9ded74d04e25c450b620e622c9b58707d1b37f"
+    },
+    {
+      "path": "src/xbox/kernel/xbox_memory_layout.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "3dcca7ebd905f2c8a82e943d39843aea4799a734f11008125a33a36782a67b51"
+    },
+    {
+      "path": "src/xbox/nv2a/CMakeLists.txt",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "d1ea96c07859e006ac1f49a49264e08e9a71f87388b8b58b170bc961e23c5e94"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_core.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "62b5be8796a65d3619bd5e4fd63236270d2ea872ba71c8951f15c408cde34e9d"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_fog.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "cdd131eab6e2c16479fb85375af3897ebaa4162c01f84666ef68187f0d16118f"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_immediate.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "24a699e9eef0c108bdb8360db8b2d32548a5c16e39cccd2b85d205c894997b89"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_mmio_hook.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "74cb2e2a10cedaf3514d4b891423ac4e8f3462b154481a54308c2e8053b7d72b"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_mmio_hook.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "b4368f98b3c77bb8e619676afc3d42b0f9c6ff69731ad79af7ccc7d8217237b7"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_pgraph_d3d11.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "1fd40e7dbf9277fe1608196cdaaef1b2b52cc674aada80e5b5af20f8206fc6b8"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_pgraph_d3d11.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "7fdc9a04dcf6fe555aec8fb981070a064426fb722e8f5859695685ff9ec7518d"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_pushbuffer.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "c8d2c8c398381021e3683b38069abcae4bb801c8f9da32c44f4ac8b363a439b6"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_pushbuffer.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "0d67c1603fbe6c1485fbd4ffa182feed25b78f99f9f2dd31b5b2077096e46b55"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_pushbuffer_walk.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "350a6a8cef5f36034c5e8ac3509ca717bdb8e4af573fdefd72c93edbde8a413a"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_regs.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "c999725f7fad35881b31ba35e63f65e38975fdea1fb6777a01c98703b683055d"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_state.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "220e705716dd3d83c9d645721d2b3bf1cc228d8b50b2a492de742752e8ad12ff"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_user_dma.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "487eec894952900cf213552854847d33bd551fb33ce3d2edf48b948aec32d799"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_vertex_cache.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "d867ff7912bbb64d3475aa1e841f97fcde2e90c78e35611d23152add81d70f9c"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_vsh.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "b98e91cdc86b53225e8ca7e42c1851ae22115f9ea72d965b18c888c47e1ab97d"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_vsh.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "875d7a7990c8639b1657978f614444df6d8d3b6ccc40ef0650de3df203a8c2cf"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_vsh_hlsl.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "f1f035cf3d53eeb78e054ff7def64bed2a79f6b801f4d4845af954e52d68661a"
+    },
+    {
+      "path": "src/xbox/nv2a/nv2a_vsh_hlsl.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "1a50c88a3e3f5ec75df67207dc5703861f5f3fb73baefc32f6379f55e8cf4d58"
+    },
+    {
+      "path": "src/xbox/nv2a/qemu_shim.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
+      "sha256": "ecb7bba9b08cd9bc08813343db03cf52079c0018243d8010dfe7c265b6124e3a"
+    },
+    {
+      "path": "src/xbox/platform/hr_period.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "df0aeb58087e13ab4ca476edb0516ddc7c3e455c92a9036ed78f572a8c1c6a25"
+    },
+    {
+      "path": "src/xbox/platform/win32_compat.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "8bea39955a07f7e303b8043ce5a70c0b32e0c2337d9356c3328162bca8e99741"
+    },
+    {
+      "path": "src/xbox/platform/xbox_winnt.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
+      "sha256": "490ecb8f5e713a1aedd080d55cac7e10be6a8d8bb16bc60de1a8dd17ae3a38cc"
+    },
+    {
+      "path": "third_party/dsp56300/Cargo.lock",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "d5148a06205bd1738b8fb8dc5fb44f65193c4961ba799be63d1e38e202381adf"
+    },
+    {
+      "path": "third_party/dsp56300/Cargo.toml",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "6fdf74b34d831a33aa1139669750ae0ccd7ecf9785b0627b1c375323d34e2919"
+    },
+    {
+      "path": "third_party/dsp56300/LICENSE",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "73f2274b38a798d9fd1b08956bcd8691c0cf7549afe6704b9337df9f2e14cb57"
+    },
+    {
+      "path": "third_party/dsp56300/README.md",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "c7402173da81edeee71107fb25a615a2536d5b1d8619643d25b43b36861024fe"
+    },
+    {
+      "path": "third_party/dsp56300/UPSTREAM.txt",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "f7efc75cdef71950977c120ff10a2221853c0b3f62ea72deb7a795f74f60f323"
+    },
+    {
+      "path": "third_party/dsp56300/crates/asm/Cargo.toml",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "096bfe9eb615d3b12e67658c3c39cd9873e02468c64f535fa5ee8fd5f3dce7b2"
+    },
+    {
+      "path": "third_party/dsp56300/crates/asm/src/ast.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "f0bb705711376597edc5bad5cefe8d6e7abff9adee1a0d9dda2147edf272c4d1"
+    },
+    {
+      "path": "third_party/dsp56300/crates/asm/src/bin/asm.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "38641a9adc8b82cfa12ab4c29cb6eedd4584ab1b6cc4b14acaa256468213b3ad"
+    },
+    {
+      "path": "third_party/dsp56300/crates/asm/src/encode.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "ce4699080433766d86b5162af32285d7790a65e72e63bd7b540e364ad5b966f6"
+    },
+    {
+      "path": "third_party/dsp56300/crates/asm/src/lib.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "ad13198abf5d0ce6679cf93ad0ff73746e23f266099294b7a954cace825473f1"
+    },
+    {
+      "path": "third_party/dsp56300/crates/asm/src/parser.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "335572242eb60ded29e937340f8a57e259e750da291a35bd63fa5c3ccb2c490a"
+    },
+    {
+      "path": "third_party/dsp56300/crates/asm/src/token.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "8133d2810596b7ebd3d4789569d44da1dbfbf69a9dcdc75098efec851acebea3"
+    },
+    {
+      "path": "third_party/dsp56300/crates/asm/tests/asm.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "952f0b27f767b72fc93c8e372ee15fd9b4e99e3d0d2de2c7657bcb60caafdaf0"
+    },
+    {
+      "path": "third_party/dsp56300/crates/asm/tests/cli.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "611ad5b834dae34d05a04e877b7db8fc389b385226f688f6a242d63100dca7fd"
+    },
+    {
+      "path": "third_party/dsp56300/crates/core/Cargo.toml",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "2cb7b256b0acce2b913216cbc70874d259392d01573e38f434ce4342636eec34"
+    },
+    {
+      "path": "third_party/dsp56300/crates/core/src/decode.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "8d6048ab8dab126285208dd381c5e85c9293380c531705164cb1c9700fe85428"
+    },
+    {
+      "path": "third_party/dsp56300/crates/core/src/encode.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "e91f51520dd5b3a48ca3601e4d3e11290d4daa5ee02b65ec2d4efbae1a458908"
+    },
+    {
+      "path": "third_party/dsp56300/crates/core/src/lib.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "da1005de4b23a0f96cba971eb624aeb5f535c25e3b00f5d768e8f774ebfcbd59"
+    },
+    {
+      "path": "third_party/dsp56300/crates/core/tests/core_api.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "09a6ff2523dfd85544f1a0083cd3a414081668108a7b834d56546115619c7119"
+    },
+    {
+      "path": "third_party/dsp56300/crates/core/tests/decode.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "05a97d101553b71d0a0bfa8cff28c316d96fa4af06858181fe8d7a7f973c7fbe"
+    },
+    {
+      "path": "third_party/dsp56300/crates/disasm/Cargo.toml",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "c83a0aa36e10a7f33b537de58fa7aa10ad081fab8f36a8cf8b1aaffbebd65d8d"
+    },
+    {
+      "path": "third_party/dsp56300/crates/disasm/src/bin/disasm.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "c0deb0ddccfd10fcf1cc6c1ad9f0d73a02b8effc3c32e51879a340e8a8bf9b00"
+    },
+    {
+      "path": "third_party/dsp56300/crates/disasm/src/lib.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "afe43a2c5c57daa0ba12f21407ec537279ae34d37722f1e10c0c80be20678fbd"
+    },
+    {
+      "path": "third_party/dsp56300/crates/disasm/tests/cli.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "6edd42ccaf45246800c198286410ca39e2db632429e867042b82669824452cac"
+    },
+    {
+      "path": "third_party/dsp56300/crates/disasm/tests/disasm.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "5c1e3dee45658f326132c1793a6a984b9f8e24750ec458335609f469cc344e08"
+    },
+    {
+      "path": "third_party/dsp56300/crates/dsp56300/Cargo.toml",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "4937e627600252b445bdfd0f84e9fce75316e3af400b951b27118dfaab41d67e"
+    },
+    {
+      "path": "third_party/dsp56300/crates/dsp56300/src/lib.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "7ebb927e52b24653a38a8c82abf2b77d2b3f4d15c961db4f11c5347b15732c12"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu-ffi/Cargo.toml",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "c66ec4f204b797d695eac8dedbcf7ece460e4fe2f4d20a67a892bdc1dba809db"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu-ffi/build.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "56400ef21fbeab52ec910cc70534f6570345775dced15f2a273f77e508078f5b"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu-ffi/cbindgen.toml",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "015c0185af68e5d8873960212bb80cfc34b957c825e25140d7b3d98c0b50e92c"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu-ffi/examples/quickstart.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "956c78a4cf5c322159e578e7d6f3280d1cadd726545e80286998857caf12d321"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu-ffi/include/dsp56300.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "2f6f69e601998b3873f5867b21562f11bcb6a938f45a5fe63202e2fac084fb48"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu-ffi/src/lib.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "bc97f2c3897aa522d1fb1dfb720b25777a727310eb4588614bcaacaf39bc765f"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/Cargo.toml",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "acc8c9ded1c0d6a486125e28e161e1c789ed760848fb3f56576e994c8b8b405a"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/benches/jit.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "c41714f3cf0974facca708efc2d17940c0abb4d3dd3bd637c78ef93c23b10eda"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/bin/difftest.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "38424dc5f92e4e757251ea93fe93759bb645fd56851afe88bf6773ea632580da"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/bin/emu.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "1a17e92efa2acf31e3dfb0c0750eb5bc56f7933d41ac4d9cebe16f7df1a250b1"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/core.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "c25461b36021e7874efdd2394d35e651aa36b5002e7d0d72c5b02b421a2421e3"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/agu.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "ec88e2e71670c0f13c02ecf1b133009fb63a0a3904ab97432c64bfe1c1de418f"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/alu.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "370146a2e7cfca8fe8b88eb28ab85e2f8833731f66a85934e4d39aaf6ac18c40"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/bitops.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "426118a158d8e18648812e8f45fbf921af2c75f368fe62230f4cda5f4f38b476"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/control.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "bf29517be317ea11316821744a260b928d8d50f2d350c53578b8362e5eb51fa0"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/flags.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "92a0451e8ffa342bcba85243bbd881079c424b88e1e839dc5a1cb1078839dff0"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/logical.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "3798107e156472c46f8e0fbb47b15f09fc6faa0609019894db0454235860f1f6"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/loops.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "a6f25a458596f1541c1c7627b607c378f65828eab6a8dc9140a5063970b60500"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/mem.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "b0fbfb7778a0a52b9d7af4d0fd3e18a3693b86b5656f2a0b2587b4e00bd94a56"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/mod.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "e348728fc473614dd89f097ef89385de01139709007fea7c8aa1c94437ba5757"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/moves.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "d7009d0b07d76eb389d0e255c228ba0d0f011ec9f1dc10495ba69b5126c45865"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/emit/regs.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "d03532f01349e78c1d330ce2102f95de97e1cef9d0854b272623c866563f4562"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/jit.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "ef854fcdf3e30ba3abc80d3d2ef6be98fd7d2e79aa0049f5573be2345037577c"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/src/lib.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "3ed06011ed5071e161027283944bc075c5768580d4adb7551b087b75c320c67a"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/data/README.md",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "ea44249722947ba64bf84e2edc0aa502752954e86f0db09648c0f64c76c7da7f"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/emu/agu.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "64f285c9db87e868d6fbd1ee77f5967ad73e6829b67eb5485dfa38e7338db796"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/emu/alu.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "b114a42eb40d3e419f9ada53402d976cf72191d3692a8152e6883eaddc4cf365"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/emu/bitops.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "fe8423fe1ccc807552f8a5396e1c1d18f595bdc6a9bdfa63495dac22fe21c334"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/emu/control.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "09173679dd46ee1fc179ad784991fe8bf208de2cf1c3d2c0e69c72b97fe8cc09"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/emu/infra.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "304f50c3afc817102b4e975771b6947588d3ccc39c2daa78deecd997c70cddc8"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/emu/logical.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "9b2df1c32c4f7d51b1beb954da6d32fd6747c53247f05aa64e4ce9d6066661f4"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/emu/loops.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "6b74ec1d990c83a3804934b30f71e4b59c07a913ec943a190883901d3a92b0e6"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/emu/main.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "21ce6f31947f81111b6f9f17be7050333bac033b4e66d56ae4dc09323bd5cf96"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/emu/moves.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "cbf8c2959fabadee49000d9bb68f9dd65188e5779b32f731c7c7e692068bcdf9"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/emu/sixcomb.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "9658486733f870aa44c98c1cd3fe372aa327f5987f7d709b239eb6751e96944b"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/goldens.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "33e84583421d5de6310bb7547fa2a46fb73e192e1031ab2589869736fbcfc0d9"
+    },
+    {
+      "path": "third_party/dsp56300/crates/emu/tests/slicediff.rs",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "928571b6abf397595fd6fa5232b5df8bef5835f7bbd5becafd611f73b5d02ca8"
+    },
+    {
+      "path": "third_party/dsp56300/rust-toolchain.toml",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "DSP56300 MIT source at 5b96b127413cc173143250c8c8226fb36cb99b3a; no guest DSP firmware",
+      "sha256": "a7a23801522d469e93021507fc88e9f5651056fce0e6aa22b3d3157c5f3dc6fe"
+    },
+    {
+      "path": "third_party/libsamplerate/AUTHORS",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "1407129d9cf9ee8444e0a397577fa384c945646d74beb3c66aab626024418230"
+    },
+    {
+      "path": "third_party/libsamplerate/CMakeLists.txt",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "c0bae086aed726a1b64d79f7f8ab62f56e28e77ae5f9100c1a646ebcd7f50bf4"
+    },
+    {
+      "path": "third_party/libsamplerate/COPYING",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "2c1f76ce2effdddb425018405d5690c0b1ab4e6976e35296b0a6db65c5e1a55d"
+    },
+    {
+      "path": "third_party/libsamplerate/UPSTREAM.txt",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "2f895ca7f062f5c8aa2c2444cc9c106d9e8f18b96c7ae63ec94ed654aa14bafa"
+    },
+    {
+      "path": "third_party/libsamplerate/Win32/libsamplerate-0.def",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "4d19392764fbebe1777924c65e8add8e6cf4f78841a2ff3a260bff09af92f8c0"
+    },
+    {
+      "path": "third_party/libsamplerate/cmake/ClipMode.cmake",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "9d5548a88cd4f9a223d8d5f13cd8d392876bbf7bdeaf4e644407cafefd55cf94"
+    },
+    {
+      "path": "third_party/libsamplerate/cmake/FindFFTW3.cmake",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "72043696480d15fc25262588ea1aaab00b8624da23b3413a0962f1d55b3d1219"
+    },
+    {
+      "path": "third_party/libsamplerate/cmake/FindFLAC.cmake",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "dcf3a233cd1361341778b86b7026b8481d8ae09bd5c171004a622b94d9743135"
+    },
+    {
+      "path": "third_party/libsamplerate/cmake/FindOgg.cmake",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "57535dfdac96bc321420759641ab68896cac19fff6899bb131394f436dfbd49a"
+    },
+    {
+      "path": "third_party/libsamplerate/cmake/FindOpus.cmake",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "95a93461a3b707ef8d22ee3ced913f843f3164da50511d50dd84f6c49ae4f065"
+    },
+    {
+      "path": "third_party/libsamplerate/cmake/FindSndFile.cmake",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "4f155be26d23f1850c14ab6dceafcc7f44b5f7cf63387c66426803f8f43e2368"
+    },
+    {
+      "path": "third_party/libsamplerate/cmake/FindVorbis.cmake",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "c924f6ca4f9ba0076e68415079498518481a8c02871cb51e502b7fda6e08293e"
+    },
+    {
+      "path": "third_party/libsamplerate/cmake/SampleRateConfig.cmake.in",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "e35421250cf4b716b366dfa1f321b5dde80aaeae61b37f54a6a99b010b1f056c"
+    },
+    {
+      "path": "third_party/libsamplerate/config.h.cmake",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "acb737b94fe8d3d067edb853c3e26251a582c9ae2409a959a666d2790fa5c36c"
+    },
+    {
+      "path": "third_party/libsamplerate/include/samplerate.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "3fdbea02af8217482082af30c70ee82cb4746fbaf1d3b51382e1f31079a4fb46"
+    },
+    {
+      "path": "third_party/libsamplerate/src/CMakeLists.txt",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "4f727f50f696cd9de62715bb6fc043dae232a34a17f42534bfb48bd8dd63df5b"
+    },
+    {
+      "path": "third_party/libsamplerate/src/Version_script.in",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "cdfbf22bb0d9e58e77fb8b55a9da944060a992700550a8ecc7c84bac4e108a8a"
+    },
+    {
+      "path": "third_party/libsamplerate/src/common.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "1b5a98007bb1527355bcc534cc2dc7431509e23315808e6489c541bf9eb0d1d0"
+    },
+    {
+      "path": "third_party/libsamplerate/src/fastest_coeffs.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "60b342165e7be7c58efd9002163c07b65ece52994ee839dbe06908991ef1fb1b"
+    },
+    {
+      "path": "third_party/libsamplerate/src/high_qual_coeffs.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "35d4bc6ed93cbd5a89510d7d7efda00116b5c28a25369c07288bc7d25a937df6"
+    },
+    {
+      "path": "third_party/libsamplerate/src/mid_qual_coeffs.h",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "22b2b75ef0344f60787f19c3bfd594d47303c0fafe7e13d0e7517612b8963d7d"
+    },
+    {
+      "path": "third_party/libsamplerate/src/samplerate.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "ae21fd2bca40dc798151c74a2016e095d1f27fa60eda77695514845f741e6e88"
+    },
+    {
+      "path": "third_party/libsamplerate/src/src_linear.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "f04a3e79b7150f2f6e6ad2b05979d874e03bf567a682bbb6507c797d4ea8a972"
+    },
+    {
+      "path": "third_party/libsamplerate/src/src_sinc.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "8e59137d758dae5027410af7f81010e7a9c33892070091866510f0f8b638237e"
+    },
+    {
+      "path": "third_party/libsamplerate/src/src_zoh.c",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "libsamplerate 0.2.2 BSD-2-Clause source at c96f5e3de9c4488f4e6c97f59f5245f22fda22f7",
+      "sha256": "c089678c9e6463896507a8d476fc4a33641c46fbe94aa8243acf725d4c203adb"
+    },
+    {
+      "path": "tools/__init__.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored package declaration",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/launcher/__init__.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "c422311ac83327477ad5c91754a9391378f95214ef1b5884ec643b28fe242590"
+    },
+    {
+      "path": "tools/launcher/backend.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "1e05e8ea2822add9726077ae01507758602936624990f133c4583aacff03d2f4"
+    },
+    {
+      "path": "tools/prepare/__init__.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored package declaration",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/prepare/__main__.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "04e814f8cdac9067ba14d17f531a3dfca546a91747cdf4d2f1c42b09bc48b826"
+    },
+    {
+      "path": "tools/prepare/disc.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "b968eef3572b74e2bbc66158f86004ef58286298414e5e7c7e34fbe7f611e16e"
+    },
+    {
+      "path": "tools/prepare/hooks.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored Conker host integration; no original game function bodies or captures",
+      "sha256": "b10cbc5757f17e297559704d8e0d006b96a7305ddf6a495f6d94c1996ab5349f"
+    },
+    {
+      "path": "tools/release/__init__.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored package declaration",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/release/check.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "c0ab91d2609712f1d1db2d83ad50ad890284fa40233cec2056d33259465c7729"
+    },
+    {
+      "path": "tools/release/package_launcher.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project tooling by avak1an",
+      "sha256": "3137986dfef2c4ab2ae79ca70ca69c7e122e9cf71a6564152af17c3e3c4d44ba"
+    },
+    {
+      "path": "tools/test_generator_config.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "d0b36bc4601e8bd4c81235caa24cea127ce1311673b04dd47836741b52cdc514"
+    },
+    {
+      "path": "tools/test_launcher_backend.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "23ec95ada55932241a7d3c8c5dcfa7ca6f2132e9b5e2e7fc98417a2b4eec3302"
+    },
+    {
+      "path": "tools/test_launcher_title_art.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "ConkerRecomp project code by avak1an",
+      "sha256": "356c423aa91bcd2cce80e295b007793150c27d4518c266efb433f6dcd04e784d"
+    },
+    {
+      "path": "tools/test_prepare.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "cd7ba7562ce78261f359d05abe34a5ff404f28cb2d7632472e12a848780693c7"
+    },
+    {
+      "path": "tools/test_source_boundary.py",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "16365740347cce601f8d7356959b91833470fdb51abe8d8c1b34477a41b39310"
+    },
+    {
+      "path": "tools/xboxrecomp/README.md",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Project-authored source/configuration",
+      "sha256": "be00575ce3afbd6158e2fb27c7daff5c60a951d9af8b97480f07c55931763232"
+    },
+    {
+      "path": "tools/xboxrecomp/__init__.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "Project-authored package declaration",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/xboxrecomp/disasm/__init__.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "cf48ed23f4f0ecb2ba55420d62772cbda2d6e7e05d9d007f4f3a3f12f7df30aa"
+    },
+    {
+      "path": "tools/xboxrecomp/disasm/cache.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "83b1f62ac2913df834f3c9e8cd01f045c042e71e14658eb232d1546a75a65192"
+    },
+    {
+      "path": "tools/xboxrecomp/disasm/config.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "b0f4d3052dfaae329a7576811ad51f46fd664887a71ac3f3031bf45df025a833"
+    },
+    {
+      "path": "tools/xboxrecomp/disasm/disasm.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "135c29756c4cb8f930724eb3bd008e8d0366b6cf9d039d0a5d4da01dffd9a246"
+    },
+    {
+      "path": "tools/xboxrecomp/disasm/engine.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "96993e576d5873634c26c234930d1149009ae3216e212a8f0af5edf63a47f9e4"
+    },
+    {
+      "path": "tools/xboxrecomp/disasm/functions.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "0c792f6f9fa881c40ce5e6bc175ba3250202791f939e5acd54d5a0bbc8fa3cfd"
+    },
+    {
+      "path": "tools/xboxrecomp/disasm/labels.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "88f974598458a53d2e8f7de142dd72fdd56e6675681f1c05926c2b0a7a004211"
+    },
+    {
+      "path": "tools/xboxrecomp/disasm/loader.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "3201492dc5edb01162325a49aceb531b933bee713ad7efca37a116e93fc30b6e"
+    },
+    {
+      "path": "tools/xboxrecomp/disasm/output.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "23040758deac4d0d5ac3877c419d49a001bc0a22c9acf8eafe99a813fb15a56c"
+    },
+    {
+      "path": "tools/xboxrecomp/disasm/xrefs.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "8f421d8d4117f4fd3abe8ceb5536b06725d52b6dfc75c2b1cb00345aa7abd140"
+    },
+    {
+      "path": "tools/xboxrecomp/recomp/__init__.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "22eccd6a7ad4aaf4e9a8179bff19147227ed254b8974a66cf7ab67c437edd574"
+    },
+    {
+      "path": "tools/xboxrecomp/recomp/config.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "3ec0d70b6c827030727024731b0d9d22b3846e0172188c4b26e7738fcfe8b44a"
+    },
+    {
+      "path": "tools/xboxrecomp/recomp/disasm.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "190e87a568e534cbe6d1fae6c65a36cec4ccd1e424d9afe3b03770cde0257063"
+    },
+    {
+      "path": "tools/xboxrecomp/recomp/lifter.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "72b11d286f4102617214935bbc5fe3c1305597cc037facb2aa20996725284442"
+    },
+    {
+      "path": "tools/xboxrecomp/recomp/translator.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "e95502b653b9ee97c3d96399ccaf6b930ec1bb7d217c5d2af0ac45d128c2f2fd"
+    },
+    {
+      "path": "tools/xboxrecomp/xbe_parser/__init__.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "1d3e3bfb519329ce7c21a8898d79fb293bc297fd87cc2f25544b71140de7e662"
+    },
+    {
+      "path": "tools/xboxrecomp/xbe_parser/xbe_parser.py",
+      "category": "GENERIC_XBOXRECOMP",
+      "reviewed": true,
+      "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
+      "sha256": "50ff86d0717bb27e674ef98f6ffbfbc70cabf44b25020f8f9eb3a7158d715f7f"
+    }
+  ],
+  "validation_scope": "Windows development preview: local ISO generation, intro and tavern; full gameplay remains unfinished"
+}

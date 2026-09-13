@@ -427,3 +427,120 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Conker local preparation and research outputs
+# This is not a release allowlist. See docs/REPOSITORY_AUDIT.md.
+# Original game data and locally generated game code/data.
+*.xiso
+*.iso
+*.xbe
+*.xmv
+*.wav
+*.wma
+*.rbm
+game/
+game_files/
+extracted/
+generated/
+shader-cache/
+local-preparation/
+/src/game/recomp/gen/
+/src/game/recomp/gen_out/
+/src/game/recomp/d3d_recovery/
+/src/game/recomp/retired/
+/gen_out/
+/gen-preregen-*/
+/tools/*/output/
+/tools/disasm/*_full_functions.json
+/tools/disasm/*_functions.json
+/tools/disasm/*_analysis.json
+/tools/recomp_*_raw.txt
+/src/kernel/ab_table.h
+/src/kernel/bb_table.h
+/bb_table.h
+# This reference implementation contains game-derived assembly, not reusable
+# project-authored decompression source. Preserve locally; never distribute.
+/tools/clr_unpack_reference/
+
+# Compilers, native binaries and caches.
+build/
+out/
+bin/
+obj/
+target/
+*.exe
+*.dll
+*.pdb
+*.obj
+*.o
+*.lib
+*.a
+*.so
+*.dylib
+*.ilk
+*.exp
+*.ipdb
+*.iobj
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Analysis and debugging outputs. Source tools and synthetic tests are retained.
+artifacts/
+dumps/
+logs/
+surfdump/
+*.log
+*.err
+*.out
+*.dmp
+*.dump
+*.orig
+*.bak
+/*.bin
+/*.bmp
+/*.dds
+/*.png
+/*.gdb
+/CHECKPOINT.md
+/*_RESULTS.md
+/controller-*
+/glyph-*
+/live-glyph*
+
+# Machine-local configuration and credentials.
+.env
+.env.*
+!.env.example
+local/
+.vs/
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.suo
+*.user
+Thumbs.db
+.DS_Store
+
+# Authored release audit code is source, not a Release build directory.
+!tools/release/
+!tools/release/*.py
+
+# The standalone launcher is the only distributed executable.
+!/conker-launcher.exe
+
+# Reviewed dependency source directories, not compiled binaries.
+!third_party/libsamplerate/Win32/
+!third_party/libsamplerate/Win32/libsamplerate-0.def
+!third_party/dsp56300/crates/*/src/bin/
+!third_party/dsp56300/crates/asm/src/bin/asm.rs
+!third_party/dsp56300/crates/disasm/src/bin/disasm.rs
+!third_party/dsp56300/crates/emu/src/bin/difftest.rs
+!third_party/dsp56300/crates/emu/src/bin/emu.rs
+
+# LGPL license text retained with the DSP source.
+!src/xbox/apu/dsp/COPYING.LIB

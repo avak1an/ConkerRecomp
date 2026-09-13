@@ -1,0 +1,15 @@
+xemu DSP host bridge, peripheral model and DMA
+https://github.com/xemu-project/xemu
+Revision 75650bd8cd91945f7b79774e2cee0b200ca373ff
+
+DSP bridge: GPL-2.0-or-later. DMA: LGPL-2.0-or-later.
+Original copyright and license notices are retained in each file.
+Local changes: standalone host includes, disabled QEMU trace backend,
+native DSP56300 backend only, per-processor DMA scratch storage, MSVC portability.
+
+Native DSP56300 engine:
+https://github.com/mborgerson/dsp56300
+Revision 5b96b127413cc173143250c8c8226fb36cb99b3a
+Source and MIT license are in third_party/dsp56300.
+This code contains no Xbox game program or DSP microcode. Microcode is loaded from the user-prepared game files.
+These third-party licenses are additional to the project license. Distribution of a combined binary must comply with the applicable GPL terms.

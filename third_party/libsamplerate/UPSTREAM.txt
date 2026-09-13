@@ -1,0 +1,4 @@
+libsamplerate 0.2.2
+https://github.com/libsndfile/libsamplerate
+Revision c96f5e3de9c4488f4e6c97f59f5245f22fda22f7
+BSD-2-Clause. Unmodified upstream source.
