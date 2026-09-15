@@ -78,8 +78,6 @@ still being refined.
 
 ![ConkerRecomp launcher showing setup, build, display and audio controls, with local paths blurred](assets/launcher.png)
 
-Local file paths are blurred for privacy.
-
 | Tavern menu | Options |
 | --- | --- |
 | ![Conker and the tavern cast at Xbox Live & Co](assets/tavern-menu.png) | ![The tavern fireplace, candle flames and smoke at Options](assets/tavern-options.png) |
