@@ -69,6 +69,38 @@ multiplayer are the next major areas of work.
 
 ---
 
+## 📸 Screenshots
+
+Screenshots from the Windows development build. Rendering and gameplay are
+still being refined.
+
+**Launcher**
+
+![ConkerRecomp launcher showing setup, build, display and audio controls, with local paths blurred](assets/launcher.png)
+
+Local file paths are blurred for privacy.
+
+| Tavern menu | Options |
+| --- | --- |
+| ![Conker and the tavern cast at Xbox Live & Co](assets/tavern-menu.png) | ![The tavern fireplace, candle flames and smoke at Options](assets/tavern-options.png) |
+
+| Story — throne room | Story — outside the tavern |
+| --- | --- |
+| ![Conker wearing the crown in the throne-room story scene](assets/campaign-throne.png) | ![Conker talking outside the tavern in the rain](assets/story-rain.png) |
+
+| Gameplay — garden | Gameplay — talking to Birdy |
+| --- | --- |
+| ![Conker beside the garden, with grass, falling leaves and water in view](assets/campaign-garden.png) | ![Birdy speaking to Conker beside the garden fence](assets/campaign-birdy.png) |
+
+**Campaign — opening dialogue**
+
+![Conker speaking in the opening campaign area](assets/campaign-dialogue.png)
+
+These images document the running recomp. All game files and generated code
+needed to play are still prepared locally from the user's own disc.
+
+---
+
 ## 🖥️ Platform
 
 ### Primary target

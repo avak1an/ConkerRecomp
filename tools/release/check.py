@@ -11,10 +11,18 @@ import json
 import re
 import struct
 import subprocess
+import zlib
 
 MANIFEST = 'config/public-files.json'
 LOGO = 'assets/conker-live-recomped-logo-v2-c.png'
 LOGO_BLOB = '65431d5521bb81eff8d0f938cafc7248b80cd23d'
+# Reviewed documentation captures, never runtime inputs or extracted textures.
+README_SCREENSHOTS = {
+    'assets/tavern-menu.png', 'assets/tavern-options.png',
+    'assets/campaign-throne.png', 'assets/campaign-dialogue.png',
+    'assets/story-rain.png', 'assets/launcher.png',
+    'assets/campaign-garden.png', 'assets/campaign-birdy.png',
+}
 LAUNCHER = 'conker-launcher.exe'
 LAUNCHER_INPUTS = (
     'src/launcher/CMakeLists.txt', 'src/launcher/launcher.c',
@@ -62,6 +70,56 @@ def check_launcher_binary(data):
         raise ValueError('Personal machine path embedded in launcher executable')
 
 
+def check_readme_screenshot(data):
+    """Accept bounded RGB PNG captures without metadata or trailing data.
+
+    Visual review and the manifest hash establish the screenshot's provenance;
+    this structural check does not classify arbitrary images as safe content.
+    """
+    if len(data) > 2 * 1024 * 1024 or data[:8] != b'\x89PNG\r\n\x1a\n':
+        raise ValueError('README screenshot must be a bounded PNG')
+    offset, kinds, pixels = 8, [], bytearray()
+    while offset + 12 <= len(data):
+        length = struct.unpack_from('>I', data, offset)[0]
+        kind = data[offset + 4:offset + 8]
+        end = offset + 12 + length
+        if end > len(data):
+            raise ValueError('Truncated README screenshot PNG')
+        payload = data[offset + 8:end - 4]
+        if zlib.crc32(kind + payload) != struct.unpack_from('>I', data, end - 4)[0]:
+            raise ValueError('Invalid README screenshot PNG checksum')
+        if kind == b'IHDR':
+            if kinds or len(payload) != 13:
+                raise ValueError('Invalid README screenshot header')
+            width, height, *format_fields = struct.unpack('>IIBBBBB', payload)
+            if not (1 <= width <= 1920 and 1 <= height <= 2160) or format_fields != [8, 2, 0, 0, 0]:
+                raise ValueError('README screenshot must be bounded RGB')
+        elif kind == b'IDAT':
+            if not kinds or kinds[-1] not in (b'IHDR', b'IDAT'):
+                raise ValueError('Invalid README screenshot image data')
+            pixels.extend(payload)
+        elif kind == b'IEND':
+            if length or not kinds or kinds[-1] != b'IDAT' or end != len(data):
+                raise ValueError('Invalid README screenshot ending')
+        else:
+            raise ValueError('Metadata or unknown payload in README screenshot')
+        kinds.append(kind)
+        offset = end
+    if not kinds or kinds[-1] != b'IEND' or offset != len(data):
+        raise ValueError('Incomplete README screenshot PNG')
+    stride = 1 + width * 3
+    expected = height * stride
+    decoder = zlib.decompressobj()
+    try:
+        raw = decoder.decompress(pixels, expected + 1)
+    except zlib.error as error:
+        raise ValueError('Invalid README screenshot compression') from error
+    if len(raw) != expected or not decoder.eof or decoder.unused_data:
+        raise ValueError('Invalid README screenshot pixel data')
+    if any(raw[y * stride] > 4 for y in range(height)):
+        raise ValueError('Invalid README screenshot scanline filter')
+
+
 def validate(files, manifest):
     """files maps Git path -> (Git mode, bytes), for index or committed tree."""
     errors = []
@@ -90,6 +148,11 @@ def validate(files, manifest):
             blob = b'blob ' + str(len(data)).encode() + b'\0' + data
             if hashlib.sha1(blob).hexdigest() != LOGO_BLOB:
                 errors.append('Existing README branding changed without review')
+        elif name in README_SCREENSHOTS:
+            try:
+                check_readme_screenshot(data)
+            except ValueError as error:
+                errors.append(str(error) + ': ' + name)
         elif name == LAUNCHER:
             try:
                 check_launcher_binary(data)

@@ -44,6 +44,44 @@ class GeneratorConfigTests(unittest.TestCase):
             self.assertIn('int32_t _fas = 0, _fbs = 0;', emitted)
             self.assertIn('_fa = _xa_d; _fb = _xa_s;', emitted)
 
+    def test_comparison_survives_a_weak_fallthrough_branch_seed(self):
+        from tools.xboxrecomp.recomp.translator import FunctionTranslator
+        # cmp ecx,edx; mov eax,1; [weak entry] je return; xor eax,eax; ret
+        code = bytes.fromhex('39d1b801000000740231c0c3')
+        config._install([config.Section('.text', 0x10000, len(code), 0, len(code), True)],
+                        0x10000, 0, 'synthetic')
+        owner = dict(end=0x10007, name='compare_fragment')
+        branch = dict(end=0x1000c, name='branch_fragment', detection_method='data_pointer')
+        translator = FunctionTranslator(code, {0x10000: owner, 0x10007: branch},
+                                        seh_prolog=set(), seh_epilog=set())
+        emitted = translator.translate_function(0x10000, owner)
+        self.assertIn('goto loc_0001000B', emitted)
+        self.assertNotIn('branch_fragment();', emitted)
+        self.assertNotIn('if (_flags', emitted)
+        self.assertEqual(owner['end'], 0x10007)  # Do not erase alternate entries.
+
+    def test_fallthrough_recovery_preserves_an_independent_call_entry(self):
+        from tools.xboxrecomp.recomp.translator import FunctionTranslator
+        code = bytes.fromhex('39d1b801000000740231c0c3')
+        config._install([config.Section('.text', 0x10000, len(code), 0, len(code), True)],
+                        0x10000, 0, 'synthetic')
+        owner = dict(end=0x10007, name='compare_fragment')
+        branch = dict(end=0x1000c, name='called_fragment', called_by=[0x20000])
+        translator = FunctionTranslator(code, {0x10000: owner, 0x10007: branch},
+                                        seh_prolog=set(), seh_epilog=set())
+        self.assertEqual(translator._extend_flag_fallthrough(0x10000, 0x10007), 0x10007)
+
+    def test_fallthrough_recovery_requires_a_known_comparison(self):
+        from tools.xboxrecomp.recomp.translator import FunctionTranslator
+        code = bytes.fromhex('b801000000740231c0c3')
+        config._install([config.Section('.text', 0x10000, len(code), 0, len(code), True)],
+                        0x10000, 0, 'synthetic')
+        owner = dict(end=0x10005, name='fragment')
+        branch = dict(end=0x1000a, name='branch_fragment')
+        translator = FunctionTranslator(code, {0x10000: owner, 0x10005: branch},
+                                        seh_prolog=set(), seh_epilog=set())
+        self.assertEqual(translator._extend_flag_fallthrough(0x10000, 0x10005), 0x10005)
+
     def test_configured_entry_realigns_an_overlapping_sweep(self):
         from tools.xboxrecomp.disasm.loader import BinaryImage, SectionInfo
         from tools.xboxrecomp.disasm.engine import DisasmEngine

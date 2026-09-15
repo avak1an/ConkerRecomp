@@ -50,7 +50,7 @@
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
       "provenance": "Existing public ConkerRecomp repository, with source-boundary documentation/ignore updates",
-      "sha256": "f8d03f77711fe10fc332d0c3a328b4fd20d27f43cca0f7a23df884a179e20b83"
+      "sha256": "8a78ba263c768d88dbd6b627497d4208e0ca86e95b44183b3379690adf090032"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -60,6 +60,34 @@
       "sha256": "60325d684375e4e9ddbab78320778aa7832806ec493978dc884f7d85120e5a13"
     },
     {
+      "path": "assets/campaign-birdy.png",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "User-requested gameplay capture from the locally built ConkerRecomp renderer; README documentation only, not a runtime asset",
+      "sha256": "36d6be5ff7424c393e95b29f69ddce53120d62a3cce38c677d32b889b8f01df1"
+    },
+    {
+      "path": "assets/campaign-dialogue.png",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "User-provided screenshot of the working ConkerRecomp build; README documentation only, not a runtime asset",
+      "sha256": "17000bb65f596fc02a360d75beef4b5aa39b70ae945bf20d2d8d3db666bbd901"
+    },
+    {
+      "path": "assets/campaign-garden.png",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "User-requested gameplay capture from the locally built ConkerRecomp renderer; README documentation only, not a runtime asset",
+      "sha256": "f9ddd741e80f2644386bb08e6863ea66f3973590759421bf7310bf0f3821ee86"
+    },
+    {
+      "path": "assets/campaign-throne.png",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "User-provided screenshot of the working ConkerRecomp build; README documentation only, not a runtime asset",
+      "sha256": "b47524678bcedbff4c3466f8e92be420e17b49abeb64f4c313edac96bdef0362"
+    },
+    {
       "path": "assets/conker-live-recomped-logo-v2-c.png",
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
@@ -67,25 +95,53 @@
       "sha256": "b33008dfa8b780217a3cd63d418635490268bdf7b0dcab84a23aad342676160b"
     },
     {
+      "path": "assets/launcher.png",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "User-requested launcher capture with AI-assisted privacy editing to blur local file paths; README documentation only, not a runtime asset",
+      "sha256": "6b7b935b4ee89b7a7262730c6348c33dd48e4dad48bbf1ad37f0b39c02f1524e"
+    },
+    {
+      "path": "assets/story-rain.png",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "User-provided screenshot of the working ConkerRecomp build; README documentation only, not a runtime asset",
+      "sha256": "6a82433297c9cee61af152aaffac9fe17f3369952e9b79a3a92fce0f643077f2"
+    },
+    {
+      "path": "assets/tavern-menu.png",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "User-requested capture from the locally built ConkerRecomp renderer; README documentation only, not a runtime asset",
+      "sha256": "a4e3b0fc0491821b7957922e5cf3bc1193a94bd6ec041c83ffc1101de35046c5"
+    },
+    {
+      "path": "assets/tavern-options.png",
+      "category": "CONKER_SPECIFIC",
+      "reviewed": true,
+      "provenance": "User-requested capture from the locally built ConkerRecomp renderer; README documentation only, not a runtime asset",
+      "sha256": "1e89773e756a3aa2c5e812993ac690563047e7c800c8876732982abe66df1224"
+    },
+    {
       "path": "config/conker/generation.json",
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
       "provenance": "Project-authored source/configuration",
-      "sha256": "11fc0a0e32a38111d5b000f681460431b6873ef8a41b1738015fd314f2bca1b6"
+      "sha256": "ad8f06eef335d7c71011ae2658b97ea56bb2a1ddebc96d61cd49da5b334d8199"
     },
     {
       "path": "config/conker/versions.json",
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
       "provenance": "Project-authored source/configuration",
-      "sha256": "dae589c012f8b134df8b2c3d29cb08d8b825e6f785128953297de862e645ef6f"
+      "sha256": "ee00e48ff14a92ac61266a2b45eb253bf90dc467f9cfdd36ab9c833a6912cab1"
     },
     {
       "path": "config/source-map.json",
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
       "provenance": "Project-authored source/configuration",
-      "sha256": "2d4a532df7981ba3dcdfd9bb45edb0654c55fcd2588fa2ae783ac863aa86c765"
+      "sha256": "5b9e8dfe70236691b36bff2fba7fddabdb3c25687ccc7f301d3949648ae81963"
     },
     {
       "path": "conker-launcher.exe",
@@ -110,7 +166,7 @@
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
       "provenance": "Project-authored source/configuration",
-      "sha256": "7b6ce4ffb932e579f1078ad092f572af5c049f982a40a9979dd7a259d44ffc7c"
+      "sha256": "14defa51ea59af96744af45a385f25b3810207c14de14a3f56109adcdb9a8f7c"
     },
     {
       "path": "licenses/XboxRecomp-MIT.txt",
@@ -516,7 +572,7 @@
       "category": "GENERIC_XBOXRECOMP",
       "reviewed": true,
       "provenance": "XboxRecomp reusable runtime with project-authored compatibility changes; original notices retained",
-      "sha256": "1be15f874916702e19f8f6ee8a035d9556b6294355d4b84f9c06d7a4b6f377ec"
+      "sha256": "119116c0845cce13b5dbf4433aa747e3287a702c3569ecc2cf9afc7416e9fa06"
     },
     {
       "path": "src/xbox/d3d/d3d8_nv2a_gpu.h",
@@ -831,7 +887,7 @@
       "category": "GENERIC_XBOXRECOMP",
       "reviewed": true,
       "provenance": "Reusable Xbox GPU/audio runtime; XboxRecomp and xemu/QEMU-derived portions identified by per-file notices and THIRD_PARTY_NOTICES.md",
-      "sha256": "1fd40e7dbf9277fe1608196cdaaef1b2b52cc674aada80e5b5af20f8206fc6b8"
+      "sha256": "6632048c925f438ea7f145965b07a54f03b7ba920a6318d123b1c0fbe7d2528e"
     },
     {
       "path": "src/xbox/nv2a/nv2a_pgraph_d3d11.h",
@@ -1636,7 +1692,7 @@
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
       "provenance": "Project-authored source/configuration",
-      "sha256": "c0ab91d2609712f1d1db2d83ad50ad890284fa40233cec2056d33259465c7729"
+      "sha256": "87443d0b83d42d5642f4913a1c0d3322ee1e548e1c2803805f654ec691a65f53"
     },
     {
       "path": "tools/release/package_launcher.py",
@@ -1650,7 +1706,7 @@
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
       "provenance": "Project-authored source/configuration",
-      "sha256": "d0b36bc4601e8bd4c81235caa24cea127ce1311673b04dd47836741b52cdc514"
+      "sha256": "9e43f740d00e07480c3ee7649c556acf7d6205cdfa9dece395b21ccdb86b3916"
     },
     {
       "path": "tools/test_launcher_backend.py",
@@ -1678,7 +1734,7 @@
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
       "provenance": "Project-authored source/configuration",
-      "sha256": "16365740347cce601f8d7356959b91833470fdb51abe8d8c1b34477a41b39310"
+      "sha256": "9ed1e014025c68ea8edefeecd450404ac8eff773d8677b4c9acf771e6e432fed"
     },
     {
       "path": "tools/xboxrecomp/README.md",
@@ -1797,7 +1853,7 @@
       "category": "GENERIC_XBOXRECOMP",
       "reviewed": true,
       "provenance": "XboxRecomp source with local changes; upstream MIT notice retained",
-      "sha256": "e95502b653b9ee97c3d96399ccaf6b930ec1bb7d217c5d2af0ac45d128c2f2fd"
+      "sha256": "b9fb2d2de67176fbff606aab51356121e64a3ace99e76f654075e0624eef0a76"
     },
     {
       "path": "tools/xboxrecomp/xbe_parser/__init__.py",

@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 4,
   "stage": "intro-tavern-preview",
   "game_ready": false,
   "title_id": "4D530051",
@@ -18,7 +18,10 @@
     "ItalianXlate"
   ],
   "function_seeds": [
-    "0x00123600"
+    "0x00030140",
+    "0x00123600",
+    "0x001A6E30",
+    "0x00247BA0"
   ],
   "alternate_entries": [],
   "entry_hooks": [

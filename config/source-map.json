@@ -49,5 +49,19 @@
     "recovered_game_and_XDK_functions": "Regenerate from the importing user's executable, never copy into public source.",
     "analysis_databases_and_dumps": "Private evidence only; preparation must discover required metadata from the local executable.",
     "manual_game_function_bodies": "Original executable functions are regenerated from the local XBE; authored host hooks are configuration-driven."
+  },
+  "documentation_media": {
+    "purpose": "README branding and reviewed captures of the locally running recomp; never runtime inputs",
+    "files": [
+      "assets/conker-live-recomped-logo-v2-c.png",
+      "assets/tavern-menu.png",
+      "assets/tavern-options.png",
+      "assets/campaign-throne.png",
+      "assets/campaign-dialogue.png",
+      "assets/story-rain.png",
+      "assets/campaign-garden.png",
+      "assets/campaign-birdy.png",
+      "assets/launcher.png"
+    ]
   }
 }

@@ -208,6 +208,8 @@ static struct {
     uint32_t transform_program_count;  /* highest slot written, + 1 */
     uint32_t transform_program_start;
     uint32_t transform_execution_mode;
+    uint32_t point_params_enable, point_sprite_enable;
+    float point_size;
     int      transform_program_dirty;
 
     /* Semaphore release. The title tracks GPU progress by having the engine
@@ -634,6 +636,8 @@ void pgraph_d3d11_init(void)
 
 static uint32_t *g_gpu_inputs;
 static size_t g_gpu_input_capacity;
+static OutputVertex *g_cpu_vertices;
+static size_t g_cpu_vertex_capacity;
 static int g_gpu_draw_failed;
 
 void pgraph_d3d11_shutdown(void)
@@ -641,6 +645,9 @@ void pgraph_d3d11_shutdown(void)
     free(g_gpu_inputs);
     g_gpu_inputs = NULL;
     g_gpu_input_capacity = 0;
+    free(g_cpu_vertices);
+    g_cpu_vertices = NULL;
+    g_cpu_vertex_capacity = 0;
     g_gpu_draw_failed = 0;
     frontend_runtime_targets_release();
     g_pg.initialized = 0;
@@ -2136,7 +2143,7 @@ static void pgraph_audit_present(int at_stall)
     static FILE *log;
     static unsigned count, captures, copy_hash, copy_nonblack;
     static unsigned capture_frames;
-    static int capture_effects;
+    static int capture_effects, capture_full_targets;
     if (!initialized) {
         initialized = 1;
         prefix = getenv("CONKER_PRESENT_AUDIT");
@@ -2144,6 +2151,7 @@ static void pgraph_audit_present(int at_stall)
         const char *frames = getenv("CONKER_PRESENT_CAPTURE_COUNT");
         capture_frames = frames ? (unsigned)atoi(frames) : 0u;
         capture_effects = getenv("CONKER_PRESENT_EFFECTS") != NULL;
+        capture_full_targets = getenv("CONKER_PRESENT_FULL_TARGETS") != NULL;
         if (capture_frames > 256u) capture_frames = 256u;
         if (prefix) {
             char name[512];
@@ -2171,9 +2179,10 @@ static void pgraph_audit_present(int at_stall)
             snprintf(name, sizeof(name), "%s.%u.backbuffer.bmp", prefix, count);
             d3d8_DebugDumpBackbuffer(name);
             for (FrontendRuntimeTarget *t = g_pg.frontend_runtime_target;
-                 (!capture_frames || capture_effects) && t != NULL; t = t->next) {
-                if (!t->texture || (capture_effects
-                    ? t->width < 128 || t->width > 256
+                 (!capture_frames || capture_effects || capture_full_targets) && t != NULL; t = t->next) {
+                if (!t->texture || (capture_full_targets
+                    ? t->width < 600
+                    : capture_effects ? t->width < 128 || t->width > 256
                     : t->width < 600)) continue;
                 snprintf(name, sizeof(name), "%s.%u.rt%08X.bmp", prefix, count, t->guest_offset);
                 d3d8_DebugDumpRuntimeTexture(t->texture, name);
@@ -3177,6 +3186,11 @@ static float vsh_attr_component(const uint32_t *vtx, unsigned attr,
         float normalized = (float)value / (float)(sign - 1u);
         return normalized < -1.0f ? -1.0f : normalized;
     }
+    /* UB_OGL has a component count, even though we gather it in one word.
+     * Missing Z/W must be 0/1, not bytes from the vertex's padding. In
+     * particular, a two-component texture coordinate needs Q=1. */
+    if (type == NV097_SET_VERTEX_DATA_ARRAY_FORMAT_TYPE_UB_OGL && comp >= size)
+        return comp == 3u ? 1.0f : 0.0f;
     if (type == NV097_SET_VERTEX_DATA_ARRAY_FORMAT_TYPE_UB_D3D ||
         type == NV097_SET_VERTEX_DATA_ARRAY_FORMAT_TYPE_UB_OGL) {
         uint32_t packed = vtx[off];
@@ -3485,6 +3499,36 @@ static void gather_immediate_vertex(void)
     g_pg.inline_count += g_pg.vert_stride;
 }
 
+/* D3D11 point lists rasterize one pixel. Expand guest points in window space
+ * so oPts controls coverage while each point keeps its constant attributes.
+ * POINT_SMOOTH replaces only texture coordinate set 3 with sprite coordinates.
+ * Clip the center before expansion, as a hardware point is clipped as a point.
+ */
+static unsigned pgraph_expand_point(const OutputVertex *center, float size,
+    int sprite, float width, float height, OutputVertex *vertices)
+{
+    if (!isfinite(center->x) || !isfinite(center->y) || !isfinite(center->z) ||
+        !isfinite(center->rhw) || center->rhw <= 0.0f ||
+        center->x < 0.0f || center->x > width || center->y < 0.0f || center->y > height ||
+        center->z < 0.0f || center->z > 1.0f) return 0;
+    if (!isfinite(size) || size < 1.0f) size = 1.0f;
+    if (size > 64.0f) size = 64.0f;
+    static const unsigned corner[6] = {0, 1, 2, 0, 2, 3};
+    static const float uv[4][2] = {{0,0}, {1,0}, {1,1}, {0,1}};
+    for (unsigned i = 0; i < 6; ++i) {
+        unsigned c = corner[i];
+        vertices[i] = *center;
+        vertices[i].x += (uv[c][0] - 0.5f) * size;
+        vertices[i].y += (uv[c][1] - 0.5f) * size;
+        if (sprite) {
+            vertices[i].extra_uv[2][0] = uv[c][0];
+            vertices[i].extra_uv[2][1] = uv[c][1];
+            vertices[i].extra_uv[2][2] = vertices[i].extra_uv[2][3] = 1.0f;
+        }
+    }
+    return 6;
+}
+
 static void submit_draw(void)
 {
     if (g_pg.indexed_draw_invalid) return;
@@ -3515,7 +3559,9 @@ static void submit_draw(void)
     }
 
     uint32_t num_verts = g_pg.inline_count / g_pg.vert_stride;
-    if (num_verts < 3) {
+    unsigned minimum = g_pg.d3d_prim_type == D3DPT_POINTLIST ? 1u :
+        g_pg.d3d_prim_type <= D3DPT_LINESTRIP ? 2u : 3u;
+    if (num_verts < minimum) {
         ++g_geom.inline_short; ++g_dt_rej_short;
         return;
     }
@@ -3546,6 +3592,11 @@ static void submit_draw(void)
     const uint32_t *src = g_pg.inline_data;
     int actual_prim_type = g_pg.d3d_prim_type;
     uint32_t out_vert_count = num_verts;
+    int is_points = actual_prim_type == D3DPT_POINTLIST;
+    if (is_points) {
+        out_vert_count = num_verts * 6u;
+        actual_prim_type = D3DPT_TRIANGLELIST;
+    }
 
     /* Handle QUADS (mode 8): convert to triangle list (6 verts per quad) */
     int is_quads = (g_pg.draw_mode == 8 || g_pg.draw_mode == 9);
@@ -3578,7 +3629,7 @@ static void submit_draw(void)
         for (unsigned a = 0; a < 16; ++a) immediate_formats[a] = 0x42u;
         draw_formats = immediate_formats;
     }
-    if (vsh_program_active() && vsh_gpu_enabled() && g_pg.chyron_scroll_offset == 0) {
+    if (!is_points && vsh_program_active() && vsh_gpu_enabled() && g_pg.chyron_scroll_offset == 0) {
         size_t words=is_quads ? (size_t)out_vert_count*g_pg.vert_stride : 0;
         if (words > g_gpu_input_capacity) {
             void *storage = realloc(g_gpu_inputs, words * 4u);
@@ -3593,9 +3644,23 @@ static void submit_draw(void)
             for(unsigned lane=0;lane<4;lane++)gpu_constants.tex_matrix[stage][lane*5]=1;
     }
 
-    /* Convert inline vertices to the four-coordinate-set FVF layout. */
-    OutputVertex *out = gpu_program ? NULL : (OutputVertex *)_alloca(out_vert_count * sizeof(OutputVertex));
-    if (out) memset(out, 0, out_vert_count * sizeof(OutputVertex));
+    /* Large quad batches exceed the native thread's stack reservation.
+     * Reuse heap storage on the CPU path, as on the GPU input path. */
+    OutputVertex *out = NULL;
+    if (!gpu_program) {
+        if (out_vert_count > g_cpu_vertex_capacity) {
+            void *storage = realloc(g_cpu_vertices, (size_t)out_vert_count * sizeof(*out));
+            if (!storage) {
+                fprintf(stderr, "[WARN PGRAPH-VERTICES] cannot allocate %u converted vertices\n",
+                        out_vert_count);
+                return;
+            }
+            g_cpu_vertices = storage;
+            g_cpu_vertex_capacity = out_vert_count;
+        }
+        out = g_cpu_vertices;
+        memset(out, 0, (size_t)out_vert_count * sizeof(*out));
+    }
     for (uint32_t i = 0; out && i < out_vert_count; ++i) {
         out[i].fog = 1.0f;
         out[i].q = 1.0f;
@@ -3658,7 +3723,7 @@ static void submit_draw(void)
                    g_pg.vert_stride*4u); \
         } else if (has_vertex_program) { \
             uint32_t _cached_output; \
-            if (nv2a_vertex_cache_lookup(&g_vertex_cache, src, g_pg.vert_stride, \
+            if (!is_points && nv2a_vertex_cache_lookup(&g_vertex_cache, src, g_pg.vert_stride, \
                     (src_idx), (dst_idx), &_cached_output)) { \
                 out[dst_idx] = out[_cached_output]; \
                 ++g_vsh_cache_hits; \
@@ -3674,7 +3739,22 @@ static void submit_draw(void)
             CONVERT_VERT_GUESSED(dst_idx, src_idx); \
     } while(0)
 
-    if (is_quads) {
+    if (is_points) {
+        float width = 0, height = 0;
+        d3d8_DebugGetViewportSize(&width, &height);
+        unsigned written = 0;
+        for (unsigned i = 0; i < num_verts; ++i) {
+            CONVERT_VERT(written, i);
+            OutputVertex center = out[written];
+            float size = has_vertex_program && g_pg.point_params_enable
+                ? g_vertex_state.o[6][0] : g_pg.point_size;
+            written += pgraph_expand_point(&center, size, g_pg.point_sprite_enable,
+                                            width, height, out + written);
+        }
+        out_vert_count = written;
+        prim_count = written / 3u;
+        if (!prim_count) return;
+    } else if (is_quads) {
         /* Convert quads (v0,v1,v2,v3) → two triangles (v0,v1,v2), (v0,v2,v3) */
         uint32_t out_idx = 0;
         for (uint32_t q = 0; q < num_quads; q++) {
@@ -4245,7 +4325,8 @@ static void submit_draw(void)
       }
     }
     /* Draw */
-    if (pgraph_apply_cull_state(dev, (D3DPRIMITIVETYPE)actual_prim_type)) {
+    if (pgraph_apply_cull_state(dev, is_points ? D3DPT_POINTLIST :
+                                    (D3DPRIMITIVETYPE)actual_prim_type)) {
         if(gpu_program) {
             memcpy(gpu_constants.constants,g_pg.transform_constant,sizeof(gpu_constants.constants));
             d3d8_DebugGetViewportSize(&gpu_constants.viewport[0],&gpu_constants.viewport[1]);
@@ -5617,6 +5698,13 @@ int pgraph_d3d11_method(int subchannel, uint32_t method, uint32_t param)
     case NV097_SET_DEPTH_TEST_ENABLE:
         g_pg.depth_test = param ? 1 : 0;
         return 1;
+
+    case NV097_SET_POINT_PARAMS_ENABLE:
+        g_pg.point_params_enable = param != 0; return 1;
+    case NV097_SET_POINT_SMOOTH_ENABLE:
+        g_pg.point_sprite_enable = param != 0; return 1;
+    case NV097_SET_POINT_SIZE:
+        g_pg.point_size = (float)(param & 0x1FFu) / 8.0f; return 1;
 
     case NV097_SET_CONTROL0:
         g_pg.control0 = param;

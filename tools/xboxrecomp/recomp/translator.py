@@ -637,6 +637,46 @@ class FunctionTranslator:
                 instructions[1].mnemonic == "mov" and
                 instructions[1].op_str == "ebp, esp")
 
+    def _extend_flag_fallthrough(self, start, end):
+        """Keep a comparison and its adjacent weak branch seed in one body.
+
+        Pointer discovery can split a function immediately before a Jcc.
+        A C tail call into that fragment loses the caller's local condition
+        flags. Decode the adjacent fragment with the comparison instead;
+        retain its separate entry for callers that reach it independently.
+        """
+        neutral = {"mov", "movzx", "movsx", "lea", "push", "pop", "nop"}
+        for _ in range(8):
+            following = self.func_db.get(end)
+            if following is None or self._is_strong_entry(following):
+                break
+            next_end = following.get("end", end)
+            if not (end < next_end <= start + 0x10000):
+                break
+            # Most adjacent seeds do not consume flags. Inspect only the
+            # first instruction before decoding the potentially large prefix.
+            probe_end = min(next_end, end + 15)
+            tail = self._read_func_bytes(end, probe_end)
+            if not tail:
+                break
+            suffix = self.disasm.disassemble_function(tail, end, probe_end)
+            if (not suffix or not suffix[0].is_cond_jump
+                    or suffix[0].mnemonic in {"jecxz", "jcxz", "loop", "loope", "loopne"}):
+                break
+            raw = self._read_func_bytes(start, end)
+            if not raw:
+                break
+            prefix = self.disasm.disassemble_function(raw, start, end)
+            if (not prefix or prefix[-1].end_address != end
+                    or prefix[-1].is_terminator):
+                break
+            producer = next((i for i in reversed(prefix)
+                             if i.mnemonic not in neutral), None)
+            if producer is None or producer.mnemonic not in {"cmp", "test", "comiss", "ucomiss"}:
+                break
+            end = next_end
+        return end
+
     def translate_function(self, func_addr, func_info):
         """
         Translate a single function to C code.
@@ -649,6 +689,8 @@ class FunctionTranslator:
             end = start + func_info.get("size", 0)
         if end <= start:
             return None
+        if recovered is None:
+            end = self._extend_flag_fallthrough(start, end)
 
         name = func_info.get("name", f"sub_{start:08X}")
         size = end - start

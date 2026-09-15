@@ -102,9 +102,11 @@ python -m unittest tools.test_launcher_title_art
 ```
 
 The checker reads Git's index blobs. It rejects unlisted files, changed hashes,
-game/build paths, personal paths and binary payloads. The existing README logo
-and standalone `conker-launcher.exe` are explicit reviewed exceptions. No game
-executable is distributed. After launcher source review, rebuild its packaged
+game/build paths, personal paths and binary payloads. The existing README logo,
+the specific PNG screenshots linked from the README, and standalone
+`conker-launcher.exe` are explicit reviewed exceptions. Screenshots are
+documentation only; the runtime never loads them. No game executable is
+distributed. After launcher source review, rebuild its packaged
 EXE with `python -m tools.release.package_launcher` and stage it with the manifest.
 
 Committed tests use synthetic inputs. Tests using your disc, generated code,

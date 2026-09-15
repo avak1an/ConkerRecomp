@@ -2,10 +2,11 @@
 import hashlib
 import json
 from pathlib import Path
-import subprocess
 import struct
+import subprocess
 import tempfile
 import unittest
+import zlib
 from tools.release.check import MANIFEST, LAUNCHER, LAUNCHER_INPUTS, validate, git_files
 
 
@@ -66,6 +67,27 @@ class SourceBoundaryTests(unittest.TestCase):
     def test_symlink_rejected(self):
         self.files['src/link'] = ('120000', b'../outside')
         self.assertTrue(validate(self.files, manifest_for(self.files)))
+
+
+    def test_reviewed_documentation_screenshot(self):
+        def chunk(kind, payload):
+            return (struct.pack('>I', len(payload)) + kind + payload
+                    + struct.pack('>I', zlib.crc32(kind + payload)))
+        png = (b'\x89PNG\r\n\x1a\n'
+               + chunk(b'IHDR', struct.pack('>IIBBBBB', 640, 480, 8, 2, 0, 0, 0))
+               + chunk(b'IDAT', zlib.compress(bytes(480 * 1921)))
+               + chunk(b'IEND', b''))
+        name = 'assets/tavern-menu.png'
+        files = dict(self.files, **{name: ('100644', png)})
+        manifest = manifest_for(files)
+        self.assertEqual(validate(files, manifest), [])
+        for invalid in (png + b'trailing payload', b'not a PNG', png[:-1]):
+            changed = dict(files, **{name: ('100644', invalid)})
+            self.assertTrue(validate(changed, manifest_for(changed)))
+        changed = dict(files, **{name: ('100644', png[:-1] + b'x')})
+        self.assertTrue(validate(changed, manifest))  # Review hash remains required.
+        unknown = dict(self.files, **{'assets/texture.png': ('100644', png)})
+        self.assertTrue(validate(unknown, manifest_for(unknown)))
 
     def packaged_fixture(self):
         for name in LAUNCHER_INPUTS:
