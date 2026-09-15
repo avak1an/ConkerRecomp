@@ -1713,7 +1713,7 @@
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
       "provenance": "ConkerRecomp project code by avak1an",
-      "sha256": "23ec95ada55932241a7d3c8c5dcfa7ca6f2132e9b5e2e7fc98417a2b4eec3302"
+      "sha256": "874a838cca59211200952d04505e3af999e60b4726582b75ddff4375d22f5376"
     },
     {
       "path": "tools/test_launcher_title_art.py",

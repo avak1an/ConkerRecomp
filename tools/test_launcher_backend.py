@@ -76,7 +76,8 @@ class LauncherTests(unittest.TestCase):
         self.assertEqual(result['state'], 'prepared')
         self.assertEqual(result['game_ready'], 'false')
         target = Path(result['detail'])
-        self.assertTrue(target.is_relative_to(self.root / 'local/preparation'))
+        # TEMP can use an 8.3 alias on Windows; preparation resolves it.
+        self.assertTrue(target.is_relative_to((self.root / 'local/preparation').resolve()))
         self.assertEqual((Path(result['data_dir']) / 'default.xbe').read_bytes(), b'SYNTH123')
         self.assertFalse(json.loads((target / 'preparation.json').read_text())['game_ready'])
         generator.assert_called_once()
@@ -158,9 +159,10 @@ class LauncherTests(unittest.TestCase):
             result = build_existing(self.root, run=run, data_dir=data)
         self.assertEqual(result['state'], 'complete')
         self.assertEqual(len(calls), 3)
-        self.assertIn('-DCONKER_GENERATED_DIR=' + str(source), calls[0][0])
+        # The backend passes canonical paths, including expanded Windows aliases.
+        self.assertIn('-DCONKER_GENERATED_DIR=' + str(source.resolve()), calls[0][0])
         self.assertIn('--check-startup', calls[-1][0])
-        self.assertIn(str(data), calls[-1][0])
+        self.assertIn(str(data.resolve()), calls[-1][0])
         for argv, kwargs in calls:
             self.assertNotIn('shell', kwargs)
             self.assertTrue(kwargs['check'])
