@@ -50,7 +50,7 @@
       "category": "CONKER_SPECIFIC",
       "reviewed": true,
       "provenance": "Existing public ConkerRecomp repository, with source-boundary documentation/ignore updates",
-      "sha256": "5b4f3a8e313eb51be9a2d23ef4ba6157fc53e9253c620eeac0c7035b27da783e"
+      "sha256": "f578bd36b2c74a40ccd271ecd7b9c7fc917426b9f5b02122f2ac16a88d9dccc7"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
