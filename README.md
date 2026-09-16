@@ -188,26 +188,11 @@ This project would not be possible without the work of the following open-source
 
 **XboxRecomp** provides the core static recompilation foundation used by this project.
 
-It is used to:
-
-- analyze and recompile the original Xbox executable;
-- translate original Xbox code into native code that can be rebuilt for Windows;
-- provide the base runtime structure used while recovering missing functions and continuations;
-- support the ongoing work of reproducing Xbox behavior outside the original hardware.
-
 A huge thank-you to the XboxRecomp developers and contributors for making this kind of project possible.
 
 ### [Xemu](https://github.com/xemu-project/xemu)
 
 **Xemu** has been an essential debugging and behavioral reference throughout development.
-
-It is used to:
-
-- run the original game as a reference implementation;
-- inspect registers, memory, stack layouts, globals, object structures, and callbacks;
-- compare retail control flow against the recompiled build;
-- capture original resource-loading, CAFF parsing, scene construction, actor-manager, camera, and rendering behavior;
-- verify the expected Xbox-visible state before reproducing that behavior in the Windows recomp.
 
 Xemu is used as a **debugging/reference tool only**. The finished recomp is not intended to require Xemu.
 
@@ -216,14 +201,6 @@ A huge thank-you to the Xemu team and contributors for their work on original Xb
 ### [CLR_Unpack](https://github.com/birdytsc/clr_unpack)
 
 **CLR_Unpack** is used to unpack and inspect *Conker: Live & Reloaded* resource/package data.
-
-It has been especially useful for:
-
-- unpacking `.rbm` package data;
-- inspecting package contents and binary layouts;
-- validating decoded Frontend resources;
-- comparing file-relative structures with the runtime objects observed in Xemu;
-- helping identify relocation targets, database objects, UI data, actor data, and other resources required by the recomp.
 
 A huge thank-you to the CLR_Unpack author and contributors for making the game's package format easier to study.
 
